@@ -60,19 +60,19 @@ function WeatherApp() {
   };
 
   return (
-    <div className="min-h-screen py-6 flex flex-col justify-center sm:py-12 bg-gray-100 dark:bg-gray-900 transition-colors duration-200">
+    <div className="flex flex-col justify-center min-h-screen px-4 py-6 transition-colors duration-200 bg-gray-100 sm:py-12 dark:bg-gray-900">
       <div className="relative py-3 sm:max-w-xl sm:mx-auto">
-        <div className="relative px-4 py-10 bg-white dark:bg-gray-800 shadow-lg sm:rounded-3xl sm:p-20 transition-colors duration-200">
+        <div className="relative px-4 py-10 transition-colors duration-200 bg-white shadow-lg dark:bg-gray-800 sm:rounded-3xl sm:p-20">
           <div className="max-w-xl mx-auto">
             <div className="divide-y divide-gray-200 dark:divide-gray-700">
-              <div className="py-8 text-base leading-6 space-y-4 text-gray-700 dark:text-gray-300 sm:text-lg sm:leading-7">
-                <h1 className="text-3xl font-extrabold text-center mb-6 text-gray-900 dark:text-white transition-colors duration-200">
+              <div className="py-8 space-y-4 text-base leading-6 text-gray-700 dark:text-gray-300 sm:text-lg sm:leading-7">
+                <h1 className="mb-6 text-3xl font-extrabold text-center text-gray-900 transition-colors duration-200 dark:text-white">
                   David's Weather App
                 </h1>
                 <form onSubmit={handleSubmit} className="mb-4">
-                  <div className="flex items-center border-b border-teal-500 dark:border-teal-400 py-2">
+                  <div className="flex items-center py-2 border-b border-teal-500 dark:border-teal-400">
                     <input
-                      className="appearance-none bg-transparent border-none w-full text-gray-700 dark:text-gray-300 mr-3 py-1 px-2 leading-tight focus:outline-none transition-colors duration-200"
+                      className="w-full px-2 py-1 mr-3 leading-tight text-gray-700 transition-colors duration-200 bg-transparent border-none appearance-none dark:text-gray-300 focus:outline-none"
                       type="text"
                       placeholder="Enter city name"
                       value={city}
@@ -80,7 +80,7 @@ function WeatherApp() {
                       aria-label="City name"
                     />
                     <button
-                      className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 dark:bg-teal-600 dark:hover:bg-teal-800 border-teal-500 dark:border-teal-600 hover:border-teal-700 dark:hover:border-teal-800 text-sm border-4 text-white py-1 px-2 rounded transition-colors duration-200"
+                      className="flex-shrink-0 px-2 py-1 text-sm text-white transition-colors duration-200 bg-teal-500 border-4 border-teal-500 rounded hover:bg-teal-700 dark:bg-teal-600 dark:hover:bg-teal-800 dark:border-teal-600 hover:border-teal-700 dark:hover:border-teal-800"
                       type="submit"
                     >
                       Search
@@ -89,7 +89,7 @@ function WeatherApp() {
                 </form>
                 {error && (
                   <div
-                    className="bg-red-100 dark:bg-red-900 border border-red-400 dark:border-red-600 text-red-700 dark:text-red-300 px-4 py-3 rounded relative transition-colors duration-200"
+                    className="relative px-4 py-3 text-red-700 transition-colors duration-200 bg-red-100 border border-red-400 rounded dark:bg-red-900 dark:border-red-600 dark:text-red-300"
                     role="alert"
                   >
                     <strong className="font-bold">Error: </strong>
